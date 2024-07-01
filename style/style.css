@@ -1,0 +1,128 @@
+:root {
+    --input-border: #ccc;
+    --grey: #72736e;
+    --white: #fff;
+    --bg-header: #f6f6f6;
+    --bg-main: #d7d7d7;
+    --h-color: #118f8f;
+    --bg-tab: #404040;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--bg-main);
+}
+
+header { 
+    background-color: var(--bg-header);
+}
+
+h1, h2 {
+    color: var(--h-color);
+}
+
+section {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.container {
+    margin: auto;
+    width: 90%;    
+}
+
+.row {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    padding: 20px;    
+}
+
+.sa {
+    justify-content: space-around;
+}
+
+.input-container {
+    width: fit-content;
+    position: relative;    
+}
+  
+.input-field {
+    padding: 8px 12px;    
+    position: relative;
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+.icon {
+    position: absolute;
+    color: var(--input-border);
+    right: 8px;
+    top: 8px;
+}
+
+.menu {
+    background-color: var(--bg-tab);
+}
+
+.menu_list {
+    display: flex;    
+}
+
+.menu_list_item {
+    color: var(--white);
+    list-style-type: none;
+    width: max-content;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.active, .menu_list_item:hover  {
+    border-left: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
+    border-bottom: 4px solid var(--h-color);    
+}
+
+.current_weather_section {
+    background-color: var(--white);
+}
+
+.weather_sys {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.weather_sys ul {
+    list-style-type: none;
+}
+
+.weather_sys ul li {
+    margin-top: 10px;
+}
+
+.weather_sys ul li:nth-child(1) {
+    margin-top: 0;
+}
+
+.weather_temerature_real {
+    font-size: 38px;
+    color: var(--bg-tab);    
+}
+
+.current_weather_section {
+    color: var(--grey);
+}
+
+.weather_main_label {
+    text-align: center;
+}

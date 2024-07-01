@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/81c5fd217a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <h1>MY WEATHER</h1>
+                <div class="input-container">
+                    <input class="input-field" type="text">
+                    <i class="fa fa-search icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="container">
+            <nav>
+                <ul class="menu_list">
+                    <li class="menu_list_item active" id="menu_today">Today</li>
+                    <li class="menu_list_item" id="menu_5_day">5-day forecast</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="tab_container">
+        <div class="tab_content_box">
+            <section class="current_weather_section">
+                <div class="row">
+                    <h2>CURRENT WEATHER</h2>
+                    <h2 id="current_date"></h2>
+                </div>
+                <div class="row sa">
+                    <div class="weather_main">
+                        <div class="weather_main_icon">
+                            <img src="" alt="weather">
+                        </div>
+                        <div class="weather_main_label">
+                            <span>Sunny</span>
+                        </div>
+                    </div>
+                    <div class="weather_temerature">
+                        <div class="weather_temerature_real">
+                            <span id="weather_temerature_real_number">29</span>
+                            <span>&#8451;</span>
+                        </div>
+                        <div class="weather_temerature_feel">
+                            <span>Real Feel</span>
+                            <span id="weather_temerature_feal_number">30</span>
+                            <span>&deg;</span>
+                        </div>
+                    </div>
+                    <div class="weather_sys">
+                        <ul>
+                            <li>Sunrise:</li>
+                            <li>Sunset:</li>
+                            <li>Duration:</li>
+                        </ul>
+                        <ul>
+                            <li id="weather_sys_sunrise">Sunrise:</li>
+                            <li id="weather_sys_sunset">Sunset:</li>
+                            <li id="weather_sys_duration">Duration:</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="tab_content_box"></div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
