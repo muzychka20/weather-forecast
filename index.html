@@ -46,7 +46,7 @@
                 <div class="row sa">
                     <div class="weather_main">
                         <div class="weather_main_icon">
-                            <img src="" alt="weather">
+                            <img src="">
                         </div>
                         <div class="weather_main_label">
                             <span>Sunny</span>
@@ -54,12 +54,12 @@
                     </div>
                     <div class="weather_temerature">
                         <div class="weather_temerature_real">
-                            <span id="weather_temerature_real_number">29</span>
+                            <span id="weather_temerature_real_number"></span>
                             <span>&#8451;</span>
                         </div>
                         <div class="weather_temerature_feel">
                             <span>Real Feel</span>
-                            <span id="weather_temerature_feal_number">30</span>
+                            <span id="weather_temerature_feal_number"></span>
                             <span>&deg;</span>
                         </div>
                     </div>
@@ -70,18 +70,32 @@
                             <li>Duration:</li>
                         </ul>
                         <ul>
-                            <li id="weather_sys_sunrise">Sunrise:</li>
-                            <li id="weather_sys_sunset">Sunset:</li>
-                            <li id="weather_sys_duration">Duration:</li>
+                            <li id="weather_sys_sunrise"></li>
+                            <li id="weather_sys_sunset"></li>
+                            <li id="weather_sys_duration"></li>
                         </ul>
                     </div>
                 </div>
+            </section>           
+        </div>
+        <div class="tab_content_box">
+            <section class="hourly_section">
+                <h2>HOURLY</h2>
+                <table>
+                    <th></th>
+                    <tr></tr>
+                </table>
             </section>
         </div>
-        <div class="tab_content_box"></div>
+        <div class="tab_content_box">
+            <section class="error">
+                <img src="img/error.png" alt="error">
+                <h2><span id="error_name"></span> could not be found.<br>Please enter a different location.</h2>
+            </section>
+        </div>
     </div>
 
-    <script src="script/script.js"></script>
+    <script type="module" src="script/script.js"></script>
 </body>
 
 </html>
