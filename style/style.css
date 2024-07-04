@@ -140,3 +140,7 @@ section {
 .error h2 {    
     padding: 30px 0px;
 }
+
+table, th, td {
+    border:1px solid black;
+}
