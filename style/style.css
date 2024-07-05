@@ -19,11 +19,12 @@ body {
     background-color: var(--bg-main);
 }
 
-header { 
+header {
     background-color: var(--bg-header);
 }
 
-h1, h2 {
+h1,
+h2 {
     color: var(--h-color);
 }
 
@@ -34,14 +35,14 @@ section {
 
 .container {
     margin: auto;
-    width: 90%;    
+    width: 90%;
 }
 
 .row {
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;    
+    padding: 20px;
 }
 
 .sa {
@@ -50,11 +51,11 @@ section {
 
 .input-container {
     width: fit-content;
-    position: relative;    
+    position: relative;
 }
-  
+
 .input-field {
-    padding: 8px 12px;    
+    padding: 8px 12px;
     position: relative;
     width: 250px;
     box-sizing: border-box;
@@ -75,7 +76,7 @@ section {
 }
 
 .menu_list {
-    display: flex;    
+    display: flex;
 }
 
 .menu_list_item {
@@ -87,10 +88,11 @@ section {
     transition: all 0.5s;
 }
 
-.active, .menu_list_item:hover  {
+.active,
+.menu_list_item:hover {
     border-left: 1px solid var(--grey);
     border-right: 1px solid var(--grey);
-    border-bottom: 4px solid var(--h-color);    
+    border-bottom: 4px solid var(--h-color);
 }
 
 section {
@@ -117,7 +119,7 @@ section {
 
 .weather_temerature_real {
     font-size: 38px;
-    color: var(--bg-tab);    
+    color: var(--bg-tab);
 }
 
 .current_weather_section {
@@ -132,15 +134,97 @@ section {
     display: none;
 }
 
-.error {        
+.error {
     text-align: center;
     background-color: var(--error-bg);
 }
 
-.error h2 {    
+.error h2 {
     padding: 30px 0px;
 }
 
-table, th, td {
-    border:1px solid black;
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#days {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.days_block {
+    background-color: #ededed;
+    padding: 20px;
+    width: 110px;
+    transition: 0.3s;
+}
+
+.days_block:hover {
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+
+.active_day {
+    background-color: #f6f6f6;
+}
+
+.days_block_weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.days_block_weather img {
+    width: 60px;
+    height: auto;
+    margin: 20px 0px;
+}
+
+table { 
+    margin: auto;
+    padding-bottom: 20px;
+    border: none;
+}
+
+td {
+    padding: 10px 15px;
+    border: none;
+    margin: 0;    
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+.td_bottom {
+    border-bottom: 1px solid #000;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+tr.underline {
+    position: relative;
+}
+
+tr.underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #85888e;
+    z-index: 1;
 }

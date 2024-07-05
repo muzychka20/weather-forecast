@@ -77,35 +77,35 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="tab_content_box">
-            <section class="hourly_section">
-                <h2>EVERY 3 HOURS</h2>
-                
-                <div id="days">
-
+            </div>
+            <div class="tab_content_box">
+                <div class="container">
+                    <div id="days"></div>
+                    <section class="hourly_section">
+                        <div class="row">
+                            <h2> EVERY 3 HOURS</h2>
+                        </div>
+                        <table>
+                            <tr id="date">
+                                <td>day</td>
+                            </tr>
+                            <tr id="forecast" class="underline">
+                                <td>Forecast</td>
+                            </tr>
+                            <tr id="temp">
+                                <td>Temp (<span>&#8451;</span>)</td>
+                            </tr>
+                            <tr id="realFeel">
+                                <td>RealFeel</td>
+                            </tr>
+                            <tr id="wind">
+                                <td>Wind (km/h)</td>
+                            </tr>
+                        </table>
+                    </section>
                 </div>
-
-                <table>
-                    <tr id="date">
-                        <td>day</td>
-                    </tr>
-                    <tr id="forecast">                        
-                        <td>Forecast</td>
-                    </tr>
-                    <tr id="temp">
-                        <td>Temp (<span>&#8451;</span>)</td>
-                    </tr>
-                    <tr id="realFeel">
-                        <td>RealFeel</td>
-                    </tr>
-                    <tr id="wind">
-                        <td>Wind (km/h)</td>
-                    </tr>
-                </table>
-            </section>
-        </div>
-        <div class="tab_content_box">
+            </div>
+            <div class="tab_content_box">
             <section class="error">
                 <img src="img/error.png" alt="error">
                 <h2><span id="error_name"></span> could not be found.<br>Please enter a different location.</h2>

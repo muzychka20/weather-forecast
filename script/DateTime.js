@@ -31,4 +31,20 @@ export class DateTime {
     duration.minutes = duration.minutes < 10 ? "0" + duration.minutes : duration.minutes;
     return duration;
   }
+
+  getDateObject(dateStr, locale) {
+    var date = new Date(dateStr);
+    const month = date.toLocaleString(locale, { month: "short" });
+    const dayShort = date.toLocaleDateString(locale, { weekday: "short" });
+    const dayLong = date.toLocaleDateString(locale, { weekday: "long" });
+    const dateNumber = date.toLocaleDateString(locale, { day: "numeric" });
+    return { month: month, dayLong: dayLong, dayShort: dayShort, dateNumber: dateNumber };
+  }
+
+  toHours(date) {
+    let ampm = date.hours >= 12 ? "pm" : "am";
+    let hours = date.split(" ")[1].split(":")[0] % 12;
+    hours = hours ? hours : 12;
+    return hours + ampm;
+  }
 }
