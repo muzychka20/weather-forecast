@@ -49,8 +49,9 @@ export class DateTime {
   }
 
   static toHours(date) {
-    let ampm = date.hours >= 12 ? "pm" : "am";
-    let hours = date.split(" ")[1].split(":")[0] % 12;
+    let hours = date.split(" ")[1].split(":")[0];
+    let ampm = hours >= 12 ? "pm" : "am";
+    hours %= 12;
     hours = hours ? hours : 12;
     return hours + ampm;
   }
