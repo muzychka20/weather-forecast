@@ -50,4 +50,23 @@ export class Forecast {
         });
     });
   }
+
+  getWeatherWithDate(data) {
+    let weatherAtAfternoon = []
+    let dateArray = []
+    data.list.forEach((element) => {
+      let date = element.dt_txt.split(" ")[0];
+      if (!dateArray.includes(date)) {
+        dateArray.push(date);
+      }
+      let hours = element.dt_txt.split(" ")[1].split(":")[0];
+      if (hours == 12) {
+        weatherAtAfternoon.push(element);
+      }
+    });
+    return {
+      "dateArray": dateArray,
+      "weatherAtAfternoon": weatherAtAfternoon,
+    };
+  }
 }

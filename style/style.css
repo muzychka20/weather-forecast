@@ -7,6 +7,7 @@
     --h-color: #118f8f;
     --bg-tab: #404040;
     --error-bg: #f6f6f6;
+    --width: 810px;
 }
 
 * {
@@ -30,12 +31,13 @@ h2 {
 
 section {
     margin: 20px auto;
-    width: 90%;
+    background-color: var(--white);    
+    max-width: var(--width);
 }
 
 .container {
-    margin: auto;
-    width: 90%;
+    margin: auto;    
+    max-width: var(--width);
 }
 
 .row {
@@ -93,10 +95,6 @@ section {
     border-left: 1px solid var(--grey);
     border-right: 1px solid var(--grey);
     border-bottom: 4px solid var(--h-color);
-}
-
-section {
-    background-color: var(--white);
 }
 
 .weather_sys {
@@ -161,7 +159,7 @@ td {
 .days_block {
     background-color: #ededed;
     padding: 20px;
-    width: 110px;
+    width: 120px;
     transition: 0.3s;
 }
 
@@ -198,15 +196,6 @@ td {
     margin: 0;    
 }
 
-tr {
-    margin: 0;
-    padding: 0;
-}
-
-.td_bottom {
-    border-bottom: 1px solid #000;
-}
-
 .cell {
     display: flex;
     align-items: center;
@@ -227,4 +216,20 @@ tr.underline::after {
     height: 1px;
     background-color: #85888e;
     z-index: 1;
+}
+
+.hourly_section {
+    background-color: var(--white);
+    margin-top: 20px;    
+    max-width: var(--width);
+    margin: 20px auto;    
+}
+
+tr:nth-child(1) td:nth-child(1) {    
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+tr td:nth-child(1) {
+    color: var(--grey);
 }
