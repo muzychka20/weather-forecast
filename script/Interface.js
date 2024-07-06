@@ -13,10 +13,10 @@ export class Interface {
     );
     $(".weather_main_label span").text(data.weather[0].main);
     $("#weather_temperature_real_number").text(
-      Math.floor(data.main.temp - 273.16)
+      Math.floor(convertKelvinToCelcium(data.main.temp))  
     );
     $("#weather_temerature_feal_number").text(
-      Math.floor(data.main.feels_like - 273.16)
+      Math.floor(convertKelvinToCelcium(data.main.feels_like))
     );
     $("#weather_sys_sunrise").text(
       DateTime.convertSecondsToAMPM(data.sys.sunrise + data.timezone)
