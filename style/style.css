@@ -244,7 +244,7 @@ tr td:nth-child(1) {
 }
 
 .nearby_block {
-    background-color: rgb(214, 214, 214);
+    background-color: #ededed;
     width: 300px;
     display: flex;
     justify-content: space-between;

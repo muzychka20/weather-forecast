@@ -166,7 +166,7 @@ export class Interface {
         main: main,
       }).click(() => {
         $("#days .days_block").removeClass("active_day");
-        $(block).addClass("a  ctive_day");
+        $(block).addClass("active_day");
         this.showWeatherForDay(data, weatherWithDate.dateArray[i]);
       });
       $("#days").append(block);
