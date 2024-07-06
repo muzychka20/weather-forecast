@@ -39,7 +39,7 @@
     <div class="tab_container">
         <div class="tab_content_box">
             <div class="container">
-            <section class="current_weather_section">
+                <section class="current_weather_section">
                     <div class="row">
                         <h2>CURRENT WEATHER</h2>
                         <h2 id="current_date"></h2>
@@ -78,43 +78,52 @@
                         </div>
                     </div>
                 </section>
-                </div>                
-            </div>
-            <div class="tab_content_box">
-                <div class="container">
-                    <div id="days"></div>
-                    <div class="hourly_section">
+                <section>
+                    <div class="container">
                         <div class="row">
-                            <h2>EVERY 3 HOURS</h2>
+                            <h2>NEARBY PLACES</h2>
                         </div>
-                        <table>
-                            <tr id="date">
-                                <td>day</td>
-                            </tr>
-                            <tr id="forecast" class="underline">
-                                <td>Forecast</td>
-                            </tr>
-                            <tr id="temp">
-                                <td>Temp (<span>&#8451;</span>)</td>
-                            </tr>
-                            <tr id="realFeel">
-                                <td>RealFeel</td>
-                            </tr>
-                            <tr id="wind">
-                                <td>Wind (km/h)</td>
-                            </tr>
-                        </table>
+                        <div id="nearby"></div>
                     </div>
-                </div>
             </div>
-            <div class="tab_content_box">
-            <section class="error">
-                <div class="container">
-                    <img src="img/error.png" alt="error">
-                    <h2><span id="error_name"></span> could not be found.<br>Please enter a different location.</h2>
-                </div>
             </section>
         </div>
+    </div>
+    <div class="tab_content_box">
+        <div class="container">
+            <div id="days"></div>
+            <div class="hourly_section">
+                <div class="row">
+                    <h2>EVERY 3 HOURS</h2>
+                </div>
+                <table>
+                    <tr id="date">
+                        <td>day</td>
+                    </tr>
+                    <tr id="forecast" class="underline">
+                        <td>Forecast</td>
+                    </tr>
+                    <tr id="temp">
+                        <td>Temp (<span>&#8451;</span>)</td>
+                    </tr>
+                    <tr id="realFeel">
+                        <td>RealFeel</td>
+                    </tr>
+                    <tr id="wind">
+                        <td>Wind (km/h)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="tab_content_box">
+        <section class="error">
+            <div class="container">
+                <img src="img/error.png" alt="error">
+                <h2><span id="error_name"></span> could not be found.<br>Please enter a different location.</h2>
+            </div>
+        </section>
+    </div>
     </div>
 
     <script type="module" src="script/script.js"></script>

@@ -42,18 +42,18 @@ export class Forecast {
         },
         method: "GET",
       })
-        .done((data) => {          
+        .done((data) => {
           resolve(data);
         })
-        .fail((error) => {          
+        .fail((error) => {
           reject(error);
         });
     });
   }
 
   getWeatherWithDate(data) {
-    let weatherAtAfternoon = []
-    let dateArray = []
+    let weatherAtAfternoon = [];
+    let dateArray = [];
     data.list.forEach((element) => {
       let date = element.dt_txt.split(" ")[0];
       if (!dateArray.includes(date)) {
@@ -65,8 +65,8 @@ export class Forecast {
       }
     });
     return {
-      "dateArray": dateArray,
-      "weatherAtAfternoon": weatherAtAfternoon,
+      dateArray: dateArray,
+      weatherAtAfternoon: weatherAtAfternoon,
     };
   }
 }

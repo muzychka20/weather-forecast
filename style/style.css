@@ -31,12 +31,12 @@ h2 {
 
 section {
     margin: 20px auto;
-    background-color: var(--white);    
+    background-color: var(--white);
     max-width: var(--width);
 }
 
 .container {
-    margin: auto;    
+    margin: auto;
     max-width: var(--width);
 }
 
@@ -184,7 +184,7 @@ td {
     margin: 20px 0px;
 }
 
-table { 
+table {
     margin: auto;
     padding-bottom: 20px;
     border: none;
@@ -193,7 +193,7 @@ table {
 td {
     padding: 10px 15px;
     border: none;
-    margin: 0;    
+    margin: 0;
 }
 
 .cell {
@@ -220,16 +220,44 @@ tr.underline::after {
 
 .hourly_section {
     background-color: var(--white);
-    margin-top: 20px;    
+    margin-top: 20px;
     max-width: var(--width);
-    margin: 20px auto;    
+    margin: 20px auto;
+    display: none;
 }
 
-tr:nth-child(1) td:nth-child(1) {    
+tr:nth-child(1) td:nth-child(1) {
     text-transform: uppercase;
     font-weight: 700;
 }
 
 tr td:nth-child(1) {
     color: var(--grey);
+}
+
+#nearby {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.nearby_block {
+    background-color: rgb(214, 214, 214);
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nearby_block:hover {
+    cursor: pointer;
+}
+
+.nearby_block_weather {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }

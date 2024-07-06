@@ -42,12 +42,17 @@ export class Interface {
     return $(".input-field").val();
   }
 
+  setCity(city) {
+    $(".input-field").val(city);
+  }
+
   changeTab(tab) {
     let index = tab.index();
     $(".menu_list_item").removeClass("active");
     tab.addClass("active");
     $(".tab_content_box").hide();
     $(".tab_content_box").eq(index).show();
+    $(".hourly_section").hide();
     return index;
   }
 
@@ -91,6 +96,8 @@ export class Interface {
   }
 
   showWeatherForDay(data, dateCurrent) {
+    $(".hourly_section").show();
+
     $("#date").empty();
     $("#forecast").empty();
     $("#temp").empty();
@@ -147,24 +154,43 @@ export class Interface {
     $("#current_date").html(DateTime.getCurrentDate());
   }
 
-  setFiveDayWeatherInterface(weatherWithDate, data) {
+  setFiveDayWeatherInterface(weatherWithDate, data) {    
     $("#days").empty();
     for (let i = 0; i < weatherWithDate.weatherAtAfternoon.length; i++) {
       let weather = weatherWithDate.weatherAtAfternoon[i].weather;
       let main = weatherWithDate.weatherAtAfternoon[i].main;
       let dateDO = DateTime.getDateObject(weatherWithDate.dateArray[i], "en");
-      let block = this
-        .createDayBlock({
-          date: dateDO,
-          weather: weather[0],
-          main: main,
-        })
-        .click(() => {
-          $("#days .days_block").removeClass("active_day");
-          $(block).addClass("active_day");
-          this.showWeatherForDay(data, weatherWithDate.dateArray[i]);
-        });
+      let block = this.createDayBlock({
+        date: dateDO,
+        weather: weather[0],
+        main: main,
+      }).click(() => {
+        $("#days .days_block").removeClass("active_day");
+        $(block).addClass("a  ctive_day");
+        this.showWeatherForDay(data, weatherWithDate.dateArray[i]);
+      });
       $("#days").append(block);
+    }
+  }
+
+  setCurrentWeatherForNearbyCitiesInterface(townWeatherData) {
+    $("#nearby").empty();
+    for (let i = 0; i < townWeatherData.length; i++) {
+      let block = $("<div>").addClass("nearby_block").attr("id", "nearby_town");
+      let townName = $("<span>").text(townWeatherData[i].name);
+      let weatherBlock = $("<div>").addClass("nearby_block_weather");
+      let img = $("<img>").attr(
+        "src",
+        "https://openweathermap.org/img/wn/" +
+          townWeatherData[i].weather[0].icon +
+          ".png"
+      );
+      let temperature = $("<span>").html(
+        convertKelvinToCelcium(townWeatherData[i].main.temp) + "&#8451;"
+      );
+      weatherBlock.append(img, temperature);
+      block.append(townName, weatherBlock);
+      $("#nearby").append(block);
     }
   }
 }

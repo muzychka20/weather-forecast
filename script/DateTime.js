@@ -7,7 +7,7 @@ export class DateTime {
       minutes: Math.floor((t % 3600) / 60),
     };
   }
-  
+
   static convertSecondsToAMPM(t) {
     let time = this.convertSecondesToHoursMinutes(t);
     let ampm = time.hours >= 12 ? " PM" : " AM";
@@ -16,7 +16,7 @@ export class DateTime {
     let minutes = time.minutes < 10 ? "0" + time.minutes : time.minutes;
     return hours + ":" + minutes + ampm;
   }
-  
+
   static getCurrentDate() {
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, "0");
@@ -27,8 +27,10 @@ export class DateTime {
 
   static getDuration(t1, t2) {
     let duration = this.convertSecondesToHoursMinutes(t2 - t1);
-    duration.hours = duration.hours < 10 ? "0" + duration.hours : duration.hours;
-    duration.minutes = duration.minutes < 10 ? "0" + duration.minutes : duration.minutes;
+    duration.hours =
+      duration.hours < 10 ? "0" + duration.hours : duration.hours;
+    duration.minutes =
+      duration.minutes < 10 ? "0" + duration.minutes : duration.minutes;
     return duration;
   }
 
@@ -38,7 +40,12 @@ export class DateTime {
     const dayShort = date.toLocaleDateString(locale, { weekday: "short" });
     const dayLong = date.toLocaleDateString(locale, { weekday: "long" });
     const dateNumber = date.toLocaleDateString(locale, { day: "numeric" });
-    return { month: month, dayLong: dayLong, dayShort: dayShort, dateNumber: dateNumber };
+    return {
+      month: month,
+      dayLong: dayLong,
+      dayShort: dayShort,
+      dateNumber: dateNumber,
+    };
   }
 
   static toHours(date) {
